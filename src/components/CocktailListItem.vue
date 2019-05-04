@@ -1,7 +1,9 @@
 <template lang="html">
   <div class="individual">
-    <h3>{{cocktail.strDrink}}</h3>
-    <img :src="cocktail.strDrinkThumb" alt="Image of cocktail">
+    <router-link :to="{ name: 'details', params: {cocktail} }">
+      <h3>{{cocktail.strDrink}}</h3>
+      <img :src="cocktail.strDrinkThumb" alt="Image of cocktail">
+    </router-link>
   </div>
 </template>
 
@@ -12,10 +14,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 img {
   height: 200px;
   width: 200px;
-
 }
 
 h3 {

@@ -1,15 +1,16 @@
 <template lang="html">
   <div class="wrapper">
+    <h2>{{heading}}-based cocktails list</h2>
     <div class="scroller">
-    <cocktail-list-item v-for="cocktail in cocktails" :cocktail="cocktail"></cocktail-list-item>
-        </div>
+      <cocktail-list-item v-for="cocktail in cocktails" :cocktail="cocktail"></cocktail-list-item>
+    </div>
   </div>
 </template>
 
 <script>
 import CocktailListItem from '@/components/CocktailListItem.vue';
 export default {
-  props: ['cocktails'],
+  props: ['cocktails', 'heading'],
   components: {
     "cocktail-list-item": CocktailListItem
   }

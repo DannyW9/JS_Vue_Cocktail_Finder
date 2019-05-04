@@ -5,7 +5,7 @@
     <h3>Select a base spirit to get started:</h3>
     <alcohol-select :spirits="alcohol"/>
     <br>
-    <cocktail-list :cocktails="cocktails"/>
+    <cocktail-list :cocktails="cocktails" v-if="selectedSpirit" :heading="selectedSpirit"/>
   </div>
 </template>
 

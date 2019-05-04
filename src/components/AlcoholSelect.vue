@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="select-div">
     <select v-model="chosenSpirit" @change="handleChange">
-      <!-- <option value="" selected disabled>Select a spirit to get started:</option> -->
-      <option v-for="(spirit) in spirits" :value="spirit">{{spirit}}</option>
+      <option value="null" selected disabled>Select a spirit:</option>
+      <option v-for="(spirit, index) in spirits" :value="spirit" :key="index">{{spirit}}</option>
     </select>
   </div>
 </template>
