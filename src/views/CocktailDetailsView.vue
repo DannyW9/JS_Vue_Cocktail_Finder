@@ -1,10 +1,19 @@
 <template lang="html">
 
   <div v-if="cocktail">
-    <h2>{{cocktail.strDrink}}</h2>
-    <p>Instructions: {{fullDetails.strInstructions}}</p>
-    <ingredient-list :fullDetails="fullDetails" :ing="ingredients"/>
 
+    <h1>{{cocktail.strDrink}}</h1>
+
+    <div class="thumb">
+      <img :src="fullDetails.strDrinkThumb">
+    </div>
+
+    <div class="text">
+      <ingredient-list :fullDetails="fullDetails" :num="numbers"/>
+      <div class="vertical"></div>
+      <p>{{fullDetails.strInstructions}}</p>
+    </div>
+    
   </div>
 
 
@@ -17,8 +26,8 @@ export default {
     return {
     chosenCocktail: this.cocktail,
     fullDetails: [],
-    ingredients: [],
-    i: ""
+    numbers: [],
+    ing2: []
     }
   },
   props: ['cocktail'],
@@ -31,13 +40,17 @@ export default {
       this.fullDetails = details.drinks[0];
     });
 
-    for(this.i=1; this.i<16; this.i++) {
-      // if(this.fullDetails[`strIngredient${this.i}`]){
-      let ing = "strIngredient" + this.i;
-      // console.log(this.fullDetails[ing]);
-        this.ingredients.push(ing)
-      // }
-    }
+    // for(let x=1; x<16; x++) {
+    //   // if(this.fullDetails[`strIngredient${x}`]){
+    //   let ing = "strIngredient" + x;
+    //   console.log(this.fullDetails[ing]);
+    //     this.ing2.push(ing)
+    //   // }
+    // }
+
+  for(let i=1; i<15; i++){
+    this.numbers.push(i);
+  };
   },
   components: {
     "ingredient-list": IngredientList
@@ -46,4 +59,35 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.thumb {
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.vertical {
+  border-left: 4px solid black;
+  height: 400px;
+  padding: 10px;
+}
+
+img {
+  height: 400px;
+  width: 400px;
+  border-radius: 15px 50px;
+}
 </style>
