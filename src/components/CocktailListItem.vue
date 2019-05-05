@@ -17,12 +17,21 @@ export default {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+a:hover {
+  color: #FF6400;
 }
 
 img {
   height: 200px;
   width: 200px;
+  opacity: 0.6;
+}
+
+img:hover {
+  opacity: 1;
 }
 
 h3 {

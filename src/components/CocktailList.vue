@@ -2,7 +2,7 @@
   <div class="wrapper">
     <h2>{{heading}}-based cocktails list</h2>
     <div class="scroller">
-      <cocktail-list-item v-for="cocktail in cocktails" :cocktail="cocktail"></cocktail-list-item>
+      <cocktail-list-item v-for="(cocktail, index) in cocktails" :cocktail="cocktail" :key="index"></cocktail-list-item>
     </div>
   </div>
 </template>
@@ -19,6 +19,11 @@ export default {
 
 <style lang="css" scoped>
 
+h2 {
+  color: white;
+  padding-top: 20px;
+}
+
 .wrapper {
   margin: auto;
   text-align: center;
@@ -26,8 +31,8 @@ export default {
   width: 80%;
   height: 100%;
   margin-bottom: 20px !important;
-  background: #EFEFEF;
-  box-shadow: 1px 1px 10px #999;
+  background: #070707;
+  box-shadow: 1px 1px 10px #FF6A00;
   padding-left: 30px;
 }
 
@@ -38,7 +43,9 @@ export default {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 500px;
+  scrollbar-color: red yellow;
   /* white-space: nowrap; */
 }
+
 
 </style>

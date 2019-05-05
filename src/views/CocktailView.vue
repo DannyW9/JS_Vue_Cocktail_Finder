@@ -1,8 +1,6 @@
 <template lang="html">
   <div>
     <h1>Cocktail Finder</h1>
-    <br>
-    <h3>Select a base spirit to get started:</h3>
     <alcohol-select :spirits="alcohol"/>
     <br>
     <cocktail-list :cocktails="cocktails" v-if="selectedSpirit" :heading="selectedSpirit"/>
@@ -44,6 +42,10 @@ export default {
 
 h1, h3 {
   text-align: center;
+}
+
+h1 {
+  font-size: 50px;
 }
 
 </style>

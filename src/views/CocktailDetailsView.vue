@@ -71,21 +71,23 @@ h1 {
 
 .text {
   display: flex;
-  width: 80%;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
   font-size: 18px;
+  background-color: #070707;
 }
 
 .vertical {
-  border-left: 4px solid black;
+  border-left: 4px solid #FF6A00;
   height: 400px;
   padding: 10px;
 }
 
 p {
  width: 50%;
+ font-size: 20px;
 }
 
 img {

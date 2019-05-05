@@ -39,16 +39,15 @@ export default {
 .nav {
   display: block;
   padding: 10px;
-  border-left: 1px solid black;
+  border-left: 2px solid #FF6A00;
   font-size: 18px;
-  margin-right: 10px;
   text-decoration: none;
-  color: black;
+  color: #FF6A00;
 }
 
 .nav:hover {
-  background-color: black;
-  color: white;
+  background-color: #FF6A00;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -58,14 +57,7 @@ nav {
   justify-content: flex-end;
   width: 100%;
   top: 0;
-  background-color: #D7D9D8;
-}
-
-
-nav ul li a:hover {
-  background-color: #5D366D;
-  color: #D7D9D8;
-  text-transform: uppercase;
+  background-color: black;
 }
 
 </style>
