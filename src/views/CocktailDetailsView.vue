@@ -13,7 +13,7 @@
       <div class="vertical"></div>
       <p>{{fullDetails.strInstructions}}</p>
     </div>
-    
+
   </div>
 
 
@@ -26,8 +26,7 @@ export default {
     return {
     chosenCocktail: this.cocktail,
     fullDetails: [],
-    numbers: [],
-    ing2: []
+    numbers: []
     }
   },
   props: ['cocktail'],
@@ -83,6 +82,10 @@ h1 {
   border-left: 4px solid black;
   height: 400px;
   padding: 10px;
+}
+
+p {
+ width: 50%;
 }
 
 img {
